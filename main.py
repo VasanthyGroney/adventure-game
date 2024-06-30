@@ -31,4 +31,17 @@ def left_path():
         print("Invalid choice. Please type 'swim' or 'walk'.")
         left_path()
 
+def village():
+    print("\nIn the village, you see a market and a tavern.")
+    print("Do you want to visit the market or the tavern?")
+    choice = input("Type 'market' or 'tavern': ").lower()
+
+    if choice == 'market':
+        print("You buy some supplies at the market and continue your adventure.")
+    elif choice == 'tavern':
+        print("You rest at the tavern and hear stories about hidden treasures in the forest.")
+    else:
+        print("Invalid choice. Please type 'market' or 'tavern'.")
+        village()
+
 
