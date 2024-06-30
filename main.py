@@ -1,19 +1,21 @@
 def start_game():
     print("Welcome to the Adventure Game!")
     print("You find yourself in a dark forest.")
-    print("There are paths to your left and right.")
+    print("There are paths to your left and right, or you can choose to quit the game.")
     first_choice()
 
 def first_choice():
-    print("\nDo you want to go left or right?")
-    choice = input("Type 'left' or 'right': ").lower()
+    print("\nDo you want to go left, right, or quit?")
+    choice = input("Type 'left', 'right', or 'quit': ").lower()
 
     if choice == 'left':
         left_path()
     elif choice == 'right':
         right_path()
+    elif choice == 'quit':
+        print("Thank you for playing! Goodbye!")
     else:
-        print("Invalid choice. Please type 'left' or 'right'.")
+        print("Invalid choice. Please type 'left', 'right', or 'quit'.")
         first_choice()
 
 def left_path():
@@ -80,12 +82,12 @@ def cave():
         cave()
 
 def continue_or_quit():
-    print("\nDo you like to continue your adventure or quit(type y/n) ?")
+    print("\nDo you want to continue your adventure or quit?")
     choice = input("Type 'continue' or 'quit': ").lower()
 
-    if choice == 'y':
+    if choice == 'continue':
         first_choice()
-    elif choice == 'n':
+    elif choice == 'quit':
         print("Thank you for playing! Goodbye!")
     else:
         print("Invalid choice. Please type 'continue' or 'quit'.")
