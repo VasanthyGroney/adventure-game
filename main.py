@@ -44,4 +44,21 @@ def village():
         print("Invalid choice. Please type 'market' or 'tavern'.")
         village()
 
+def right_path():
+    print("\nYou walk down the right path and encounter a wild animal.")
+    print("Do you want to fight the animal or run away?")
+    choice = input("Type 'fight' or 'run': ").lower()
+
+    if choice == 'fight':
+        print("You bravely fight the animal and win!")
+        print("You find a mysterious cave behind the animal.")
+        cave()
+    elif choice == 'run':
+        print("You run away safely and find yourself back at the start.")
+        first_choice()
+    else:
+        print("Invalid choice. Please type 'fight' or 'run'.")
+        right_path()
+
+
 
